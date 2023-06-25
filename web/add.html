@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/add.css">
+    <title>Add Device</title>
+</head>
+
+<body>
+    <header id="header"></header>
+    <ul class="menu">
+        <p style="text-align: left; margin-left:1% ; color: #7289DA;">Select Menu below for adding devices: </p>
+        <li><a href="#" onclick="showContent('light')">Add Light</a></li>
+        <li><a href="#" onclick="showContent('ac')">Add Ac</a></li>
+        <li><a href="#" onclick="showContent('security')">Add Security</a></li>
+    </ul>
+
+    <div id="light" class="content">
+        <h1 class="welcome" style="color: #fff;">Add Light Device</h1>
+        <p style="color: #fff;">Fill out the following details to add a light device:</p>
+        <div class="container">
+            <form>
+                <label for="light_name">Device Name:</label>
+                <input type="text" id="light_name" name="light_name" required><br><br>
+
+                <label for="light_location">Device Location:</label>
+                <input type="text" id="light_location" name="light_location" required><br><br>
+
+                <label for="light_state">State:</label>
+                <select id="light_state" name="light_state" required>
+                    <option value="on">On</option>
+                    <option value="off">Off</option>
+                </select><br><br>
+
+                <label for="light_color">Color:</label>
+                <input type="color" id="light_color" name="light_color" required><br><br>
+
+                <label for="light_level">Brightness :</label>
+                <input type="range" id="light_level" name="light_level" min="0" max="100" value="50"
+                    oninput="levelValue.value = light_level.value ">
+                <output id="levelValue" style="color: #fff;">50</output><t style="color: #fff;">%</t><br><br>
+
+                <label for="light_mode">Light Mode:</label>
+                <select id="light_mode" name="light_mode" required>
+                    <option value="Daylight">Daylight</option>
+                    <option value="Night Mode">Night Mode</option>
+                    <option value="Party">Party</option>
+                </select><br><br>
+
+                <input type="submit" id="add_light" value="Add Light">
+            </form>
+        </div>
+    </div>
+
+    <div id="ac" class="content">
+        <h1 class="welcome" style="color: #fff;">Add Smart AC</h1>
+        <p style="color: #fff;">Fill out the following details to add a Ac device:</p>
+        <div class="container">
+            <form>
+              <label for="ac_name">Device Name:</label>
+              <input type="text" id="ac_name" name="ac_name" required>
+          
+              <label for="ac_location">Device Location:</label>
+              <input type="text" id="ac_location" name="ac_location" required>
+          
+              <label for="ac_state">State:</label>
+              <select id="ac_state" name="ac_state" required>
+                <option value="on">On</option>
+                <option value="off">Off</option>
+              </select>
+          
+              <label for="temperature">Temperature:</label>
+                          <input type="range" id="temperature" name="temperature" min="16" max="30" value="24"
+                              oninput="acValue.value = temperature.value">
+                          <output id="acValue" style="color: #fff;">24</output><t style="color: #fff;">%</t><br><br>
+          
+              <label for="ac_mode">AC Mode:</label>
+              <select id="ac_mode" name="ac_mode" required>
+                <option value="cool">Cool</option>
+                <option value="heat">Heat</option>
+                <option value="fan">Fan</option>
+                <option value="dry">Dry</option>
+              </select>
+          
+              <label for="fan_speed">Fan Speed:</label>
+              <select id="fan_speed" name="fan_speed" required>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+              </select>
+          
+              <input type="submit" id="add_ac" value="Add AC">
+            </form>
+          </div>
+    </div>
+
+    <div id="security" class="content">
+        <h1 class="welcome" style="color: #fff;">Add Smart Security</h1>
+        <p style="color: #fff;">Fill out the following details to add a smart security device:</p>
+        <div class="container">
+            <form>
+              <label for="security_name">Device Name:</label>
+              <input type="text" id="security_name" name="security_name" required>
+          
+              <label for="security_location">Device Location:</label>
+              <input type="text" id="security_location" name="security_location" required>
+          
+              <label for="camera">Camera:</label>
+              <select id="camera" name="camera" required>
+                <option value="on">On</option>
+                <option value="off">Off</option>
+              </select>
+          
+              <label for="security_mode">Security Mode:</label>
+              <select id="security_mode" name="security_mode" required>
+                <option value="home">Home</option>
+                <option value="away">Away</option>
+                <option value="night">Night</option>
+              </select>
+          
+              <label for="alarm_sensitivity">Alarm Sensitivity:</label>
+              <select id="alarm_sensitivity" name="alarm_sensitivity" required>
+                <option value="off">Off</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+              </select>
+          
+              <input type="submit" id="add_security" value="Add Security">
+            </form>
+          </div>
+    </div>
+
+    <div class="content cards" id="cardss"  >
+      <div class="card">
+        <h3>Add Light</h3>
+        <p>
+          A light device is used to illuminate the area. It can be turned on and off, and may have adjustable brightness levels.
+        </p>
+        <button type="button" onclick="showContent('light')">Add Light</button>
+      </div>
+    
+      <div class="card">
+        <h3>Add Air Conditioner</h3>
+        <p>
+          An air conditioner (AC) is used to control the temperature and humidity of the environment. It provides cooling or heating functionality and can be adjusted to maintain a desired temperature.
+        </p>
+        <button type="button" onclick="showContent('ac')">Add AC</button>
+      </div>
+    
+      <div class="card">
+        <h3>Add Security System</h3>
+        <p>
+          A security system includes various devices such as cameras, alarms, and sensors. It is used to monitor and protect the premises against unauthorized access, intrusions, or emergencies.
+        </p>
+        <button type="button" onclick="showContent('security')">Add Security System</button>
+      </div>
+
+    </div>
+    
+    <footer style="position: relative; bottom: 0; background-color: #40444B; color: #7289DA;">
+        <p>&copy; 2023 Smart Building Inc.</p>
+    </footer>
+</body>
+<script>
+  showContent('cardss')
+    function showContent(contentId) {
+        var contents = document.getElementsByClassName('content');
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].style.display = 'none';
+        }
+        document.getElementById(contentId).style.display = 'block';
+
+        var menuItems = document.getElementsByTagName('a');
+        for (var i = 0; i < menuItems.length; i++) {
+            menuItems[i].classList.remove('selected');
+        }
+        event.target.classList.add('selected');
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="/javascripts/app.js"></script>
+
+</html>

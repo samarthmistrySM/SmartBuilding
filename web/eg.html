@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body{
+            background-color: #202225;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .circle {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .card {
+            width: 300px;
+            background-color: #36393f;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+        form {
+            width: 660px;
+            background-color: #36393f;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin: 10px;
+            margin-left: 380px;
+            text-align: center;
+            transition: transform 0.3s;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .form-label {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: none;
+            background-color: #40444b;
+            color: #ffffff;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-input:focus {
+            outline: none;
+            background-color: #4f545c;
+        }
+
+        .form-submit {
+            background-color: #7289da;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-submit:hover {
+            background-color: #677bc4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cards">
+        <div class="card">
+            <div class="circle" style="  background-color: #43b581;"></div>
+            <div class="content">
+                <h2 class="light-name">Name: </h2>
+                <p class="location">Location: </p>
+                <p class="light-state">Light State: </p>
+                <p class="brightness">Brightness: </p>
+                <p class="light-mode">Light Mode: </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="circle" style="  background-color: #43b581;"></div>
+            <div class="content">
+                <h2 class="light-name">Name: </h2>
+                <p class="location">Location: </p>
+                <p class="light-state">Light State: </p>
+                <p class="brightness">Brightness: </p>
+                <p class="light-mode">Light Mode: </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="circle" style="  background-color: #43b581;"></div>
+            <div class="content">
+                <h2 class="light-name">Name: </h2>
+                <p class="location">Location: </p>
+                <p class="light-state">Light State: </p>
+                <p class="brightness">Brightness: </p>
+                <p class="light-mode">Light Mode: </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="circle" style="  background-color: #43b581;"></div>
+            <div class="content">
+                <h2 class="light-name">Name: </h2>
+                <p class="location">Location: </p>
+                <p class="light-state">Light State: </p>
+                <p class="brightness">Brightness: </p>
+                <p class="light-mode">Light Mode: </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="circle" style="  background-color: blue;"></div>
+            <div class="content">
+                <h2 class="light-name">Name: </h2>
+                <p class="location">Location: </p>
+                <p class="light-state">Light State: </p>
+                <p class="brightness">Brightness: </p>
+                <p class="light-mode">Light Mode: </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="circle" style="  background-color: blue;"></div>
+            <div class="content">
+                <h2 class="light-name">Name: </h2>
+                <p class="location">Location: </p>
+                <p class="light-state">Light State: </p>
+                <p class="brightness">Brightness: </p>
+                <p class="light-mode">Light Mode: </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="circle" style="  background-color: blue;"></div>
+            <div class="content">
+                <h2 class="light-name">Name: </h2>
+                <p class="location">Location: </p>
+                <p class="light-state">Light State: </p>
+                <p class="brightness">Brightness: </p>
+                <p class="light-mode">Light Mode: </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="circle" style="  background-color: blue;"></div>
+            <div class="content">
+                <h2 class="light-name">Name: </h2>
+                <p class="location">Location: </p>
+                <p class="light-state">Light State: </p>
+                <p class="brightness">Brightness: </p>
+                <p class="light-mode">Light Mode: </p>
+            </div>
+        </div>
+    </div>
+    <div class="form">
+            <form>
+                <h3>Light Control</h3>
+                <label class="form-label" for="light-name">Light Name:</label>
+                <input type="text" class="form-input" id="light_name" name="light_name" required>
+
+                <label class="form-label" for="light_location">Device Location:</label>
+                <input type="text" class="form-input" id="light_location" name="light_location" required>
+                <label class="form-label" for="light_state">State:</label>
+
+                <select class="form-input" id="light_state" name="light_state" required>
+                    <option value="on">On</option>
+                    <option value="off">Off</option>
+                </select>
+
+                <label class="form-label" for="light_color">Color:</label>
+                <input class="form-input" type="color" id="light_color" name="light_color" required>
+
+                <label class="form-label" for="light_level">Brightness:</label>
+                <input class="form-input" type="range" id="light_level" name="light_level" min="0" max="100" value="50"
+                    oninput="levelValue.value = light_level.value">
+                <output id="levelValue">50</output>%
+
+                <label class="form-label" for="light_mode">Light Mode:</label>
+                <select class="form-input" id="light_mode" name="light_mode" required>
+                    <option value="Daylight">Daylight</option>
+                    <option value="Night Mode">Night Mode</option>
+                    <option value="Party">Party</option>
+                </select>
+
+                <input class="form-submit" type="submit" id="update_light" value="Update Light">
+            </form>
+
+        <!-- Add more cards here -->
+
+    </div>
+</body>
+
+</html>

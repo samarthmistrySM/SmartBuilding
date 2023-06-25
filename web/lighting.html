@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Devices</title>
+    <link rel="stylesheet" href="/styles/devices.css">
+</head>
+
+ 
+<body>
+    <header id="header"></header>
+    <div class="cards" id="light_container"></div>
+    <div class="form">
+            <form>
+                <h3>Light Control</h3>
+                <label class="form-label" for="l_name">Light Name:</label>
+                <input type="text" class="form-input" id="l_name" name="l_name" required>
+
+                <label class="form-label" for="l_location">Device Location:</label>
+                <input type="text" class="form-input" id="l_location" name="l_location" required>
+                <label class="form-label" for="l_state">State:</label>
+
+                <select class="form-input" id="l_state" name="l_state" required>
+                    <option value="on">On</option>
+                    <option value="off">Off</option>
+                </select>
+
+                <label class="form-label" for="l_color">Color:</label>
+                <input class="form-input" type="color" id="l_color" name="l_color" required>
+
+                <label class="form-label" for="l_level">Brightness:</label>
+                <input class="form-input" type="range" id="l_level" name="l_level" min="0" max="100" value="50"
+                    oninput="levelValue.value = l_level.value">
+                <output id="levelValue">50</output>%
+
+                <label class="form-label" for="l_mode">Light Mode:</label>
+                <select class="form-input" id="l_mode" name="l_mode" required>
+                    <option value="Daylight">Daylight</option>
+                    <option value="Night Mode">Night Mode</option>
+                    <option value="Party">Party</option>
+                </select>
+
+                <input class="form-submit" type="submit" id="update_light" value="Update Light">
+            </form>
+
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="/javascripts/app.js"></script>
+</html>

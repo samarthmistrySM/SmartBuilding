@@ -1,0 +1,16 @@
+{
+  "name": "smart-building",
+  "version": "1.0.0",
+  "description": "a full stack website for smart bulding management",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samarth Mistry",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
+  }
+}

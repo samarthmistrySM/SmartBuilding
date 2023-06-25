@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Devices</title>
+    <link rel="stylesheet" href="/styles/devices.css">
+</head>
+
+
+<body>
+    <header id="header"></header>
+    <div class="cards" id="security_container">
+
+
+    </div>
+    <div class="form">
+        <form>
+            <label class="form-label" for="s_name">Device Name:</label>
+            <input class="form-input" type="text" id="s_name" name="s_name" required>
+        
+            <label class="form-label" for="s_location">Device Location:</label>
+            <input class="form-input" type="text" id="s_location" name="s_location" required>
+        
+            <label class="form-label" for="cam">Camera:</label>
+            <select class="form-input" id="cam" name="cam" required>
+              <option value="on">On</option>
+              <option value="off">Off</option>
+            </select>
+        
+            <label class="form-label" for="s_mode">Security Mode:</label>
+            <select class="form-input" id="s_mode" name="s_mode" required>
+              <option value="home">Home</option>
+              <option value="away">Away</option>
+              <option value="night">Night</option>
+            </select>
+        
+            <label class="form-label" for="a_sensitivity">Alarm Sensitivity:</label>
+            <select class="form-input" id="a_sensitivity" name="a_sensitivity" required>
+              <option value="off">Off</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+        
+            <input class="form-submit" type="submit" id="update_security" value="Update Security">
+          </form>
+
+    </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="/javascripts/app.js"></script>
+
+</html>

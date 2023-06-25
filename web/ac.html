@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Devices</title>
+    <link rel="stylesheet" href="/styles/devices.css">
+</head>
+
+ 
+<body>
+    <header id="header"></header>
+    <div class="cards" id="ac_container"></div>
+    <div class="form">
+
+
+            <form>
+                <label class="form-label" for="a_name">Device Name:</label>
+                <input class="form-input" type="text" id="a_name" name="a_name" required>
+            
+                <label class="form-label" for="a_location">Device Location:</label>
+                <input class="form-input" type="text" id="a_location" name="a_location" required>
+            
+                <label class="form-label" for="a_state">State:</label>
+                <select class="form-input" id="a_state" name="a_state" required>
+                  <option value="on">On</option>
+                  <option value="off">Off</option>
+                </select>
+            
+                <label class="form-label" for="a_temperature">Temperature:</label>
+                            <input class="form-input" type="range" id="a_temperature" name="a_temperature" min="16" max="30" value="24"
+                                oninput="ac_Value.value = a_temperature.value">
+                            <output id="ac_Value" style="color: #fff;">24</output><t style="color: #fff;">%</t><br><br>
+            
+                <label class="form-label" for="a_mode">AC Mode:</label>
+                <select class="form-input" id="a_mode" name="a_mode" required>
+                  <option value="cool">Cool</option>
+                  <option value="heat">Heat</option>
+                  <option value="fan">Fan</option>
+                  <option value="dry">Dry</option>
+                </select>
+            
+                <label class="form-label" for="f_speed">Fan Speed:</label>
+                <select class="form-input" id="f_speed" name="f_speed" required>
+                  <option value="low">Low</option>
+                  <option value="medium">Medium</option>
+                  <option value="high">High</option>
+                </select>
+            
+                <input class="form-submit"  type="submit" id="update_ac" value="Update AC">
+              </form>
+
+    </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="/javascripts/app.js"></script>
+</html>
